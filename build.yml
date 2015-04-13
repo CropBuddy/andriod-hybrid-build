@@ -1,0 +1,36 @@
+#sdk: "C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1"
+sdkversion: "4.1.0"
+name: "Cropbuddy"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator7.0"
+  provisionprofile: 
+  codesignidentity: "iPhone Developer"
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.cropbuddy"
+  BundleURLScheme: "cropbuddy"
+wp8:
+  productid: "37af9b10-c26d-0132-0461-001e37c07476"
+android:
+  manifest_template: "AndroidManifest.erb"
+  version: "2.3.3"
+  capabilities:
+    - hardware_acceleration
+#sdk: "MC3000c50b (ARMV4I)"
+#sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+wm: 
+extensions:
+  - rhoconnect-client
+capabilities:
+  - gps
+  - camera
+  - vibrate
+  - bluetooth
+  - non_motorola_device
+  - native_browser
+  - network_state
+  - sdcard

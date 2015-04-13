@@ -1,0 +1,9 @@
+rhodes_path='C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1'
+app_version='1.0'
+app_name='Cropbuddy'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='android'
+os_version='4.0'
+ext_path=C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/commonAPI/coreapi;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/extensions/json;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoconnect-client-4.1.1/lib/../ext/rhoconnect-client;

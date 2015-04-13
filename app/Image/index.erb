@@ -1,0 +1,45 @@
+
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Images</h1>
+    <a href="<%= Rho::Application.startURI %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+    <li>
+      <% if System::get_property('has_camera') %>
+            <li>
+            <a href="<%= url_for(:action => :new) %>">
+              <span class="title">Take picture</span>
+              <span class="disclosure_indicator"/>
+            </a>
+         
+     <% end %>
+      </li>
+      
+      <li><a href="<%= url_for :action =>:myMaps %>" data-ajax="false">Maps</a></li> 
+      <% @images.each do |image| %>
+      
+        <li>
+           <img src="<%= image.image_uri %>" width="100%"></img>   
+           
+           <%= image.created_at %><br/>
+           
+           latitude:<%= image.latitude %><br />     
+           longitude:<%= image.longitude %>  
+           
+        </li>
+           
+        <li>
+        <a href="/app/Image/showmap?latitude=<%= image.latitude.to_s%>&longitude=<%= image.longitude.to_s%>&provider=RhoGoogle"
+              target="_self">[Display map ]</a>  
+        </li>
+        
+      <% end %>
+    </ul>
+  </div>
+</div>

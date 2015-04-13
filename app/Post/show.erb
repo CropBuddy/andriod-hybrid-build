@@ -1,0 +1,105 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @post.owner %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @post.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Owner</div>
+            <div class="itemValue"><%= @post.owner %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Title</div>
+            <div class="itemValue"><%= @post.title %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Crop</div>
+            <div class="itemValue"><%= @post.crop %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Pest</div>
+            <div class="itemValue"><%= @post.pest %></div>
+          </li>
+      
+      
+          <li>
+            <div class="itemLabel">DateStarted</div>
+            <div class="itemValue"><%= @post.date_started %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CurrentDate</div>
+            <div class="itemValue"><%= @post.current_date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AreaAffected</div>
+            <div class="itemValue"><%= @post.area_affected %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">RelatedTo</div>
+            <div class="itemValue"><%= @post.related_to %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Rating</div>
+            <div class="itemValue"><%= @post.rating %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ImageUri</div>
+            <div class="itemValue"><%= @post.image_uri %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Causes</div>
+            <div class="itemValue"><%= @post.causes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Symptoms</div>
+            <div class="itemValue"><%= @post.symptoms %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">TypePost</div>
+            <div class="itemValue"><%= @post.type_post %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Priority</div>
+            <div class="itemValue"><%= @post.priority %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">TimeSpan</div>
+            <div class="itemValue"><%= @post.time_span %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">MetaData</div>
+            <div class="itemValue"><%= @post.meta_data %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Keywords</div>
+            <div class="itemValue"><%= @post.keywords %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

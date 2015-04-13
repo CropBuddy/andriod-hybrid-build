@@ -1,0 +1,93 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @post.title %></h1>
+    <a href="<%= Rho::Application.startURI %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @post.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="post[owner]" class="fieldLabel">Owner</label>
+            <input type="text" id="post[owner]" name="post[owner]" <%= placeholder("Owner") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[title]" class="fieldLabel">Title</label>
+            <input type="text" id="post[title]" name="post[title]" <%= placeholder("Title") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[crop]" class="fieldLabel">Crop</label>
+            <input type="text" id="post[crop]" name="post[crop]" <%= placeholder("Crop") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[pest]" class="fieldLabel">Pest</label>
+            <input type="text" id="post[pest]" name="post[pest]" <%= placeholder("Pest") %> />
+          </div>
+      
+      
+          <div data-role="fieldcontain">
+            <label for="post[date_started]" class="fieldLabel">Date started</label>
+            <input type="text" id="post[date_started]" name="post[date_started]" <%= placeholder("Date started") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[area_affected]" class="fieldLabel">Area affected</label>
+            <input type="text" id="post[area_affected]" name="post[area_affected]" <%= placeholder("Area affected") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[related_to]" class="fieldLabel">Related to</label>
+            <input type="text" id="post[related_to]" name="post[related_to]" <%= placeholder("Related to") %> />
+          </div>
+      
+      
+          <div data-role="fieldcontain">
+            <label for="post[image_uri]" class="fieldLabel">Image uri</label>
+            <input type="text" id="post[image_uri]" name="post[image_uri]" <%= placeholder("Image uri") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[causes]" class="fieldLabel">Causes</label>
+            <input type="text" id="post[causes]" name="post[causes]" <%= placeholder("Causes") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[symptoms]" class="fieldLabel">Symptoms</label>
+            <input type="text" id="post[symptoms]" name="post[symptoms]" <%= placeholder("Symptoms") %> />
+          </div>
+      
+
+          <div data-role="fieldcontain">
+            <label for="post[priority]" class="fieldLabel">Priority</label>
+            <input type="text" id="post[priority]" name="post[priority]" <%= placeholder("Priority") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[time_span]" class="fieldLabel">Time span</label>
+            <input type="text" id="post[time_span]" name="post[time_span]" <%= placeholder("Time span") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[meta_data]" class="fieldLabel">Meta data</label>
+            <input type="text" id="post[meta_data]" name="post[meta_data]" <%= placeholder("Meta data") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[keywords]" class="fieldLabel">Keywords</label>
+            <input type="text" id="post[keywords]" name="post[keywords]" <%= placeholder("Keywords") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

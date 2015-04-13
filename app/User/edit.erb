@@ -1,0 +1,66 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @user.username %></h1>
+    <a href="<%= url_for :action => :show, :id => @user.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @user.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @user.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="user[username]" class="fieldLabel">Username</label>
+            <input type="text" id="user[username]" name="user[username]" value="<%= @user.username %>" <%= placeholder( "Username" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[email]" class="fieldLabel">Email</label>
+            <input type="text" id="user[email]" name="user[email]" value="<%= @user.email %>" <%= placeholder( "Email" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[phone]" class="fieldLabel">Phone</label>
+            <input type="text" id="user[phone]" name="user[phone]" value="<%= @user.phone %>" <%= placeholder( "Phone" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[lat]" class="fieldLabel">Lat</label>
+            <input type="text" id="user[lat]" name="user[lat]" value="<%= @user.lat %>" <%= placeholder( "Lat" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[lng]" class="fieldLabel">Lng</label>
+            <input type="text" id="user[lng]" name="user[lng]" value="<%= @user.lng %>" <%= placeholder( "Lng" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[occupation]" class="fieldLabel">Occupation</label>
+            <input type="text" id="user[occupation]" name="user[occupation]" value="<%= @user.occupation %>" <%= placeholder( "Occupation" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[rating]" class="fieldLabel">Rating</label>
+            <input type="text" id="user[rating]" name="user[rating]" value="<%= @user.rating %>" <%= placeholder( "Rating" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[timestamp]" class="fieldLabel">Timestamp</label>
+            <input type="text" id="user[timestamp]" name="user[timestamp]" value="<%= @user.timestamp %>" <%= placeholder( "Timestamp" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[image_uri]" class="fieldLabel">Image uri</label>
+            <input type="text" id="user[image_uri]" name="user[image_uri]" value="<%= @user.image_uri %>" <%= placeholder( "Image uri" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

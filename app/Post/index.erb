@@ -1,0 +1,26 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Forums</h1>
+    <a href="<%= Rho::Application.startURI %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+
+    
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @posts.each do |post| %>
+      
+          <li>
+            <a href="<%= url_for :action => :show, :id => post.object %>">
+              <%= post.title %>
+            </a>
+          </li>
+      
+      <% end %>
+    </ul>
+  </div>
+
+</div>

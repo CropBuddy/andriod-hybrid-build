@@ -1,0 +1,121 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @post.owner %></h1>
+    <a href="<%= url_for :action => :show, :id => @post.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @post.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @post.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="post[owner]" class="fieldLabel">Owner</label>
+            <input type="text" id="post[owner]" name="post[owner]" value="<%= @post.owner %>" <%= placeholder( "Owner" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[title]" class="fieldLabel">Title</label>
+            <input type="text" id="post[title]" name="post[title]" value="<%= @post.title %>" <%= placeholder( "Title" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[crop]" class="fieldLabel">Crop</label>
+            <input type="text" id="post[crop]" name="post[crop]" value="<%= @post.crop %>" <%= placeholder( "Crop" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[pest]" class="fieldLabel">Pest</label>
+            <input type="text" id="post[pest]" name="post[pest]" value="<%= @post.pest %>" <%= placeholder( "Pest" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[lat]" class="fieldLabel">Lat</label>
+            <input type="text" id="post[lat]" name="post[lat]" value="<%= @post.lat %>" <%= placeholder( "Lat" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[long]" class="fieldLabel">Long</label>
+            <input type="text" id="post[long]" name="post[long]" value="<%= @post.long %>" <%= placeholder( "Long" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[date_started]" class="fieldLabel">Date started</label>
+            <input type="text" id="post[date_started]" name="post[date_started]" value="<%= @post.date_started %>" <%= placeholder( "Date started" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[current_date]" class="fieldLabel">Current date</label>
+            <input type="text" id="post[current_date]" name="post[current_date]" value="<%= @post.current_date %>" <%= placeholder( "Current date" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[area_affected]" class="fieldLabel">Area affected</label>
+            <input type="text" id="post[area_affected]" name="post[area_affected]" value="<%= @post.area_affected %>" <%= placeholder( "Area affected" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[related_to]" class="fieldLabel">Related to</label>
+            <input type="text" id="post[related_to]" name="post[related_to]" value="<%= @post.related_to %>" <%= placeholder( "Related to" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[rating]" class="fieldLabel">Rating</label>
+            <input type="text" id="post[rating]" name="post[rating]" value="<%= @post.rating %>" <%= placeholder( "Rating" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[image_name]" class="fieldLabel">Image name</label>
+            <input type="text" id="post[image_name]" name="post[image_name]" value="<%= @post.image_name %>" <%= placeholder( "Image name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[image_uri]" class="fieldLabel">Image uri</label>
+            <input type="text" id="post[image_uri]" name="post[image_uri]" value="<%= @post.image_uri %>" <%= placeholder( "Image uri" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[causes]" class="fieldLabel">Causes</label>
+            <input type="text" id="post[causes]" name="post[causes]" value="<%= @post.causes %>" <%= placeholder( "Causes" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[symptoms]" class="fieldLabel">Symptoms</label>
+            <input type="text" id="post[symptoms]" name="post[symptoms]" value="<%= @post.symptoms %>" <%= placeholder( "Symptoms" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[type_post]" class="fieldLabel">Type post</label>
+            <input type="text" id="post[type_post]" name="post[type_post]" value="<%= @post.type_post %>" <%= placeholder( "Type post" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[priority]" class="fieldLabel">Priority</label>
+            <input type="text" id="post[priority]" name="post[priority]" value="<%= @post.priority %>" <%= placeholder( "Priority" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[time_span]" class="fieldLabel">Time span</label>
+            <input type="text" id="post[time_span]" name="post[time_span]" value="<%= @post.time_span %>" <%= placeholder( "Time span" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[meta_data]" class="fieldLabel">Meta data</label>
+            <input type="text" id="post[meta_data]" name="post[meta_data]" value="<%= @post.meta_data %>" <%= placeholder( "Meta data" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="post[keywords]" class="fieldLabel">Keywords</label>
+            <input type="text" id="post[keywords]" name="post[keywords]" value="<%= @post.keywords %>" <%= placeholder( "Keywords" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

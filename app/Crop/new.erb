@@ -1,0 +1,60 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @crop.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @crop.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="crop[name]" class="fieldLabel">Name</label>
+            <input type="text" id="crop[name]" name="crop[name]" <%= placeholder("Name") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[categories]" class="fieldLabel">Categories</label>
+            <input type="text" id="crop[categories]" name="crop[categories]" <%= placeholder("Categories") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[altitude]" class="fieldLabel">Altitude</label>
+            <input type="text" id="crop[altitude]" name="crop[altitude]" <%= placeholder("Altitude") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[soil_type]" class="fieldLabel">Soil type</label>
+            <input type="text" id="crop[soil_type]" name="crop[soil_type]" <%= placeholder("Soil type") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[pest]" class="fieldLabel">Pest</label>
+            <input type="text" id="crop[pest]" name="crop[pest]" <%= placeholder("Pest") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[disease]" class="fieldLabel">Disease</label>
+            <input type="text" id="crop[disease]" name="crop[disease]" <%= placeholder("Disease") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[timestamps]" class="fieldLabel">Timestamps</label>
+            <input type="text" id="crop[timestamps]" name="crop[timestamps]" <%= placeholder("Timestamps") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="crop[image_uri]" class="fieldLabel">Image uri</label>
+            <input type="text" id="crop[image_uri]" name="crop[image_uri]" <%= placeholder("Image uri") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

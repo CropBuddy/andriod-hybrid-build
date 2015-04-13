@@ -1,0 +1,64 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @pest_disease.name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @pest_disease.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Name</div>
+            <div class="itemValue"><%= @pest_disease.name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Category</div>
+            <div class="itemValue"><%= @pest_disease.category %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Details</div>
+            <div class="itemValue"><%= @pest_disease.details %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CropsAffected</div>
+            <div class="itemValue"><%= @pest_disease.crops_affected %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Causes</div>
+            <div class="itemValue"><%= @pest_disease.causes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Symptoms</div>
+            <div class="itemValue"><%= @pest_disease.symptoms %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Causes</div>
+            <div class="itemValue"><%= @pest_disease.causes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Control</div>
+            <div class="itemValue"><%= @pest_disease.control %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ImageUri</div>
+            <div class="itemValue"><%= @pest_disease.image_uri %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>
